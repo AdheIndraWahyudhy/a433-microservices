@@ -1,0 +1,22 @@
+version: '3' #Menggunakan Docker Compose versi 3
+# Membuat Dua Buah Service yaitu item-app dan item-db
+services:
+  # Service item-app
+  item-app:
+    # Mengguanakan image dari Github package yang telah dipush sebelumnya
+    image: ghcr.io/adheindrawahyudhy/item-app:1.0.0
+    ports:
+      - "80:8080" # Mengatur port
+    depends_on:
+      - item-db # Memastikan item-app hanya berjalan setelah item-db diluncurkan
+    restart: always # Menerapkan restart policy 
+
+  # Service item-db
+  item-db:
+    image: mongo:3 # Image yang digunakan yaitu Mongo:3
+    volumes:
+      - app-db:/data/db # Memakai Vvolume bernama app-db dengan target /data/db
+
+# Membuat Volume
+volumes:
+  app-db:

@@ -1,0 +1,5 @@
+link github package
+https://github.com/users/AdheIndraWahyudhy/packages/container/package/item-app
+
+image
+docker pull ghcr.io/adheindrawahyudhy/item-app:1.0.0

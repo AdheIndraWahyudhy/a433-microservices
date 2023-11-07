@@ -4,7 +4,7 @@ services:
   # Service item-app
   item-app:
     # Mengguanakan image dari Github package yang telah dipush sebelumnya
-    image: ghcr.io/adheindrawahyudhy/item-app:1.0.0
+    image: ghcr.io/adheindrawahyudhy/item-app:v1
     ports:
       - "80:8080" # Mengatur port
     depends_on:

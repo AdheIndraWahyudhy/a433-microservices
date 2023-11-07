@@ -5,10 +5,10 @@ docker build -t item-app:v1 .
 docker images
 
 # Membuat tag baru
-docker tag item-app:v1 ghcr.io/adheindrawahyudhy/item-app:1.0.0
+docker tag item-app:v1 ghcr.io/adheindrawahyudhy/item-app:v1
 
 # Login Ke Github Package
 echo $PAT | docker login ghcr.io -u AdheIndraWahyudhy --password-stdin
 
 # Mengunggah Image ke Github Package
-docker push ghcr.io/adheindrawahyudhy/item-app:1.0.0
+docker push ghcr.io/adheindrawahyudhy/item-app:v1
